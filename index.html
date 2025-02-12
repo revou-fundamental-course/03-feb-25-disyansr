@@ -7,13 +7,14 @@
     <meta charset="UTF-8">
     <!-- Tag untuk responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Konversi Suhu</title>
+    <title>Celsius &harr; Fahrenheit Converter</title>
 
     <!-- Link CSS -->
     <link rel="stylesheet" href="css\styles.css">
 </head>
 
 <body>
+    <!-- Header: Judul utama -->
     <header class="main-header">
         <h1>Konversi Suhu <br> Celsius (&deg;C) &harr; Fahrenheit (&deg;F)</h1>
     </header>
@@ -26,31 +27,33 @@
                 dalam bentuk Fahrenheit (&deg;F).</p>
         </section>
 
-        <!-- Form input suhu yang ingin dikonversi -->
+        <!-- Bagian form untuk input suhu -->
         <section>
             <form>
+                <!-- Input suhu dalam Celsius -->
                 <div class="input-group">
                     <label for="main-input"><b>Celsius (&deg;C):</b></label>
                     <input type="number" id="main-input">
                 </div>
 
+                <!-- Tombol -->
                 <div class="button-group">
-                    <button>Konversi</button>
-                    <button>Reset</button>
-                    <button>Reverse</button>
+                    <button type="button" onclick="validateForm();">Konversi</button>
+                    <button type="reset" onclick="resetForm();">Reset</button>
+                    <button type="button" onclick="reverseConversion();">Reverse</button>
                 </div>
             </form>
         </section>
 
-        <!-- Hasil konversi -->
+        <!-- Bagian hasil konversi -->
         <section>
             <div class="input-group">
                 <label for="main-result"><b>Fahrenheit (&deg;F):</b></label>
-                <input type="text" id="main-result" readonly>
+                <input type="number" id="main-result" readonly>
             </div>
         </section>
 
-        <!-- Cara konversi suhu -->
+        <!-- Bagian cara konversi suhu -->
         <section>
             <div class="input-group">
                 <label for="cara-konversi"><b>Cara konversi:</b></label>
@@ -58,7 +61,7 @@
             </div>
         </section>
 
-        <!-- Penjelasan rumus konversi suhu -->
+        <!-- Bagian penjelasan rumus konversi suhu -->
         <section>
             <header>
                 <h3>Cara Konversi Celsius (&deg;C) &harr; Fahrenheit (&deg;F)</h3>
@@ -67,6 +70,7 @@
             <hr>
 
             <article>
+                <!-- Konversi dari Celsius ke Fahrenheit -->
                 <p><b>Celsius (&deg;C) ke Fahrenheit (&deg;F):</b></p>
                 <p>Suhu <i>S</i> dalam derajat Fahrenheit (&deg;F) 
                 sama dengan suhu <i>S</i> dalam derajat 
@@ -75,6 +79,8 @@
                 (<i>S</i><sub>(&deg;C)</sub> &#215; 9/5) &#43; 32 
                 <b>atau</b> <i>S</i><sub>(&deg;F)</sub> &#61; 
                 (<i>S</i><sub>(&deg;C)</sub> &#215; 1.8) &#43; 32</p>
+
+                <!-- Konversi dari Fahrenheit ke Celsius -->
                 <p><b>Fahrenheit (&deg;F) ke Celsius (&deg;C):</b></p>
                 <p>Suhu <i>S</i> dalam derajat Celsius (&deg;C) 
                 sama dengan suhu <i>S</i> dalam derajat
@@ -85,7 +91,17 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <p>Made by Disya</p>
     </footer>
+
+    <!-- Toast notification -->
+    <div id="toast" class="toast">Konversi berhasil!</div>
+
+    <!-- Link JavaScript -->
+    <script src="js\script.js"></script>
+
 </body>
+
+</html>

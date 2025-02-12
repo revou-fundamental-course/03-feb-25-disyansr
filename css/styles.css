@@ -1,34 +1,50 @@
 /* Ini file CSS */
 
+
+/* Styling untuk seluruh body */
 body {
     font-family: sans-serif;
     color: #D5CEA3;
     background-color: #3D0000;
 }
 
+/* Styling untuk kontainer utama */
 main {
     max-width: 550px;
     justify-self: center;
 
-    /* Background matter */
+    /* Memberikan background */
     background-color: #630606;
     border-radius: 14px;
     padding: 10px;
+
+    /* Efek transisi saat elemen berubah */
+    transition: transform 0.6s ease-in-out;
+    transform-style: preserve-3d;
 }
 
+/* Styling untuk header utama */
 .main-header {
     text-align: center;
 }
 
+/* Memberikan padding ke setiap section */
 section {
     padding: 8px;
 }
 
+/* Styling untuk grup input (label + input field) */
 .input-group {
     display: flex;
     flex-direction: column;
 }
 
+/* Efek transisi pada input field */
+.input-group input {
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Styling dasar untuk semua input */
 input {
     width: 100%;
     padding: 14px 20px;
@@ -40,22 +56,62 @@ input {
     outline: none;
 }
 
+/* Efek saat inputan aktif/fokus */
 input[type=number]:focus {
     border: 4px solid #555;
 }
 
+/* Styling untuk grup tombol */
 .button-group {
     margin-top: 16px;
 }
 
+/* Styling dasar untuk tombol */
 button {
     background-color: #1D1616;
     color: #EEEEEE;
     border: none;
-    padding: 8px;
-    border-radius: 4px;
+    padding: 10px;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 
+/* Efek hover pada tombol */
+button:hover {
+    background-color: #630606;
+    transform: scale(1.05);
+    box-shadow: 2px 2px 15px rgb(0, 0, 0);
+}
+
+/* Animasi flip untuk tombol reverse */
+.flip {
+    transform: rotateY(180deg);
+    transform-origin: center;
+}
+
+/* Styling untuk footer */
 footer {
     text-align: center;
+}
+
+/* Styling untuk toast notification */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1D1616;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Toast notification untuk pesan error */
+.toast.error {
+    background-color: #1D1616;
 }
