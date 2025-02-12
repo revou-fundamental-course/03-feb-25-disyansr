@@ -1,7 +1,5 @@
 // Ini file Javascript
 
-console.log('Javascript is working!');
-
 // Variabel global untuk menentukan apakah input dalam Celsius atau Fahrenheit
 let isCelsius = true;
 
